@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "209007591875",
+    "firebase_url": "https://upes-spe-fest.firebaseio.com",
+    "project_id": "upes-spe-fest",
+    "storage_bucket": "upes-spe-fest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209007591875:android:f834b38a74d210e9",
+        "android_client_info": {
+          "package_name": "com.myapps.upesse.upes_spefest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209007591875-q7iorjhf23o6tgebuelkp5ekmjn99dpm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapps.upesse.upes_spefest",
+            "certificate_hash": "9C94FAFF5574B6F0FC5D0F7F007EF60F842A3605"
+          }
+        },
+        {
+          "client_id": "209007591875-4t1fiknlkenc1spddqsfbikb8sd0gpo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm3dbin72-a3K8QsmiLxQIiwRJ4m_YGjg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209007591875-4t1fiknlkenc1spddqsfbikb8sd0gpo4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

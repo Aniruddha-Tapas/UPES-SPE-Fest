@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.NewPostActivity">
+
+    <ViewSwitcher
+        android:id="@+id/switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff9f9f9">
+        <!--android:background="#fff0f0f0"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/view_feed_toolbar" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:layout_above="@+id/bottomlayout"
+                android:layout_below="@+id/appBarLayout">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.fenchtose.nocropper.CropperView
+                        android:layout_margin="5dp"
+                        android:id="@+id/imageview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff9f9f9"
+                        app:grid_color="@color/colorAccent"
+                        app:grid_opacity="0.8"
+                        app:grid_thickness="0.8dp"
+                        app:padding_color="#fff9f9f9"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:id="@+id/snap_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left|bottom"
+                        android:layout_margin="24dp"
+                        android:background="@drawable/black_transp_circ_ripple"
+                        android:padding="8dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/ic_crop_free_white_24dp" />
+
+                    <ImageView
+                        android:id="@+id/rotate_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|bottom"
+                        android:layout_margin="24dp"
+
+                        android:background="@drawable/black_transp_circ_ripple"
+                        android:padding="8dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/ic_rotate_right_white_24dp" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ff282828"
+                android:id="@+id/bottomlayout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/gallery_button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:elevation="5dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/btn_capture_options"
+                            android:src="@drawable/ic_collections_white_24dp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/camera_button"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
+                            android:background="@drawable/btn_capture" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/next_button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
+                            android:background="@drawable/btn_capture_options"
+                            android:src="@mipmap/ic_done_white_24dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/view_feed_toolbar" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/appBarLayout2">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/new_post_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+
+
+                    <EditText
+                        android:id="@+id/new_post_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:hint="Write a caption..." />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+
+                    <Button
+                        android:id="@+id/new_post_submit"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:text="SUBMIT" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ViewSwitcher>
+
+</FrameLayout>

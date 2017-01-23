@@ -1,0 +1,196 @@
+<resources>
+    <string name="app_name">UPES SPE Fest 2017</string>
+
+    <!-- strings for Auth UI demo activities -->
+    <eat-comment />
+    <string name="sign_in">Sign In</string>
+    <string name="unknown_response">Unexpected onActivityResult response code</string>
+    <string name="unknown_sign_in_response">Unknown response from AuthUI sign-in</string>
+    <string name="sign_in_cancelled">Sign in cancelled</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="sign_out_failed">Sign out failed</string>
+
+    <string name="user_info_no_name">Unknown user</string>
+    <string name="error_required_field">Required</string>
+    <string name="error_upload_task_create">Couldn\'t create upload task.</string>
+    <string name="error_user_not_signed_in">Error user not signed in.</string>
+    <string name="post_upload_progress_message">Uploading...</string>
+    <string name="new_comment_hint">Enter new comment</string>
+    <string name="user_logged_out_error">You must be logged in to do that.</string>
+    <string name="follow_user_error">Unable to follow user.</string>
+
+    <string name="user_profile_photo">http://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-19/929118_455075441302693_1605108410_a.jpg</string>
+
+
+    <!-- Events -->
+
+    <!-- Titles -->
+    <string name="event_title_1">Techuminati: Ideate Your Way</string>
+    <string name="event_title_2">Petrabol: The Oily Tourney</string>
+    <string name="event_title_3">Mud Challenge: To Win, Get Your Hands Dirty</string>
+    <string name="event_title_4">Amphora: The Oil Valley</string>
+    <string name="event_title_5">Virtuoso: The Scientific Canvas</string>
+    <string name="event_title_6">Breaking Bid</string>
+    <string name="event_title_7">Petravolley: Practicing Sportsmanship</string>
+    <string name="event_title_8">Symposium: War Of Words</string>
+    <string name="event_title_9">Treasure Hunt: Hunt for glory</string>
+    <string name="event_title_10">Noesis: The Knowledge Quest</string>
+
+    <!-- Description -->
+    <string name="event_desc_1">Expression and presentation of your research is the key to exchanging and innovating your ideas. Techuminati will be a highly competitive Paper presentation competition which covers various topics on the Oil and Gas Upstream Sector. It provides a chance to implement all three tools of an invention: Idea, Research and Prototype.</string>
+    <string name="event_desc_2">Marking the importance of physical wellness, the UPES SPE Fest, 2017 brings to you a six-a-side football league. Witness the players sweat sheer sportsmanship amidst a technical forest in this neck to neck tournament.</string>
+    <string name="event_desc_3">Mud Challenge will be an endeavor by the UPES SPE Student Chapter to assist the participants in applying their bookish knowledge to the real world applications in order to attain a practical outlook. The event will require the participants to design a drilling mud with the specified properties, and will be followed by a final quizzing round.</string>
+    <string name="event_desc_4">The valley of Dehradun has served as the hub of petroleum research activities for many years with the presence of many esteemed institutes. This event, aimed at the local participants, will test their knowledge of the Industry related work being conducted in Dehradun, helping them stay in touch with the ongoing research.</string>
+    <string name="event_desc_5">A true artist is one who makes the world visualize his own ideas. Keeping this in mind, the UPES SPE Student Chapter presents the opportunity for the students to display their technical know-how, imagination, vision and innovation in the form of a Poster presentation competition.</string>
+    <string name="event_desc_6">For individuals who like to think on their feet and can thrive under pressure, Bid for Bonds will be one of the most innovative events of the Fest. It will essentially check the participants\' reasoning, speed and their penchant for chemistry. Participants strive to create a compound of the highest bond energy by bidding on elements using virtual money.</string>
+    <string name="event_desc_7">Keeping the sportsmanship alive, Petravolley will be an event brought forth to increase the candor and spirit of the Fest. A series of inter-university volleyball matches will take place interspersed with team play, hard work and camaraderie.</string>
+    <string name="event_desc_8">A stirring coalescence of technical knowledge and oratory skills, Symposium will be an event presented by the UPES SPE Student Chapter. A fusion of esotericism and language, marching in two rounds, this event will be a technical group discussion and debate contest.</string>
+    <string name="event_desc_9">All work and no play makes Jack a dull boy. Use your wits to find the hidden treasure dissolving the noon that it\'s just work that makes you successful. Expand the hints to make your way through the clues with dispensing team spirit.</string>
+    <string name="event_desc_10">An event crafted for generating greater understanding of one\'s domain, Noesis will be a technical quiz based on questions from the Oil and Gas Industry. This event will provide a platform for participants to display their technical prowess in a cognitive environment.</string>
+
+    <string name="event1_contact1">Akshay Gupta</string>
+    <string name="event1_contact2">Melvin Mathew</string>
+    <string name="event1_contact3"> </string>
+    <string name="event1_phoneno1">+919897958802</string>
+    <string name="event1_phoneno2">+917060325436</string>
+    <string name="event1_phoneno3" />
+
+    <string name="event2_contact1">Avnish Pratap Singh</string>
+    <string name="event2_contact2">Abhinav Shrivastava</string>
+    <string name="event2_contact3"> </string>
+    <string name="event2_phoneno1">+917579042285</string>
+    <string name="event2_phoneno2">+917895349897</string>
+    <string name="event2_phoneno3"> </string>
+
+    <string name="event3_contact1">Himani Sancheti</string>
+    <string name="event3_contact2">Devanshu Mishra</string>
+    <string name="event3_contact3"> </string>
+    <string name="event3_phoneno1">+918979467281</string>
+    <string name="event3_phoneno2">+918979782271</string>
+    <string name="event3_phoneno3"> </string>
+
+    <string name="event4_contact1">Saumya Tripathi</string>
+    <string name="event4_contact2">Vishal Khajuria</string>
+    <string name="event4_contact3">Abhinav Shrivastava</string>
+    <string name="event4_phoneno1">+917895054532</string>
+    <string name="event4_phoneno2">+917060325349</string>
+    <string name="event4_phoneno3">+917895349897</string>
+
+    <string name="event5_contact1">Saloni Sapru</string>
+    <string name="event5_contact2">Akshat Agrawal</string>
+    <string name="event5_contact3"> </string>
+    <string name="event5_phoneno1">+917860159570</string>
+    <string name="event5_phoneno2">+919719070583</string>
+    <string name="event5_phoneno3"> </string>
+
+    <string name="event6_contact2">Meghna Goyal</string>
+    <string name="event6_contact1">Muskan Rai</string>
+    <string name="event6_contact3"> </string>
+    <string name="event6_phoneno1">+919557938014</string>
+    <string name="event6_phoneno2">+919690682429</string>
+    <string name="event6_phoneno3"> </string>
+
+    <string name="event7_contact1">Aman Singh</string>
+    <string name="event7_contact2">Y. Prudhvi Raj</string>
+    <string name="event7_contact3"> </string>
+    <string name="event7_phoneno1">+919997782264</string>
+    <string name="event7_phoneno2">+917500034560</string>
+    <string name="event7_phoneno3"> </string>
+
+    <string name="event8_contact1">Rishi Mishra</string>
+    <string name="event8_contact2">Vivek Varma</string>
+    <string name="event8_contact3"> </string>
+    <string name="event8_phoneno1">+919719062949</string>
+    <string name="event8_phoneno2">+917895257488</string>
+    <string name="event8_phoneno3"> </string>
+
+    <string name="event9_contact1">Ayush Bansal</string>
+    <string name="event9_contact2">Shivam Rastogi</string>
+    <string name="event9_contact3"> </string>
+    <string name="event9_phoneno1">+919927653626</string>
+    <string name="event9_phoneno2">+919634340312</string>
+    <string name="event9_phoneno3"> </string>
+
+    <string name="event10_contact1">Shashank Pandey</string>
+    <string name="event10_contact2">Sagar Kalra</string>
+    <string name="event10_contact3"> </string>
+    <string name="event10_phoneno1">+919628007711</string>
+    <string name="event10_phoneno2">+919719120550</string>
+    <string name="event10_phoneno3"> </string>
+    <string name="splash_about"><![CDATA[The UPES SPE Fest is the annual convention of the UPES SPE Student Chapter which provides a common platform for mutual sharing of knowledge, experience and strengthen the bonds of the future leaders of the Oil & Gas industry. \'Challenges always lead to the revocation of stagnancy and cater to an Industry\'s pragmatic and contributive progress.\' The UPES SPE Fest, 2017 aims to bring about the awareness reverberating to the optimum relocation of resources and technology attributing the Industry\'s survival.]]></string>
+
+    <!-- Conferences -->
+
+
+    <string name="conf_speakers_title">Speakers For The Conference:</string>
+
+    <string name="conf_speakers">
+    1. Mrs. Reba Devi, Deputy General Manager, Oil India Limited (Keynote Speaker)\n\n
+    2. Mr. Prakhar Gupta, Senior Reservoir Engineer, Sun Oil and Natural Gas, Sun Petrochemicals\n\n
+    3. Mr. Manish Kumar, Reservoir Engineer, Oil India Limited\n\n
+    4. Dr. S Banik, Head, ONGC Academy\n\n
+    5. Mr. Anil Kumar Naithani, Deputy General Manager, Human Resources, ONGC Academy
+    </string>
+
+
+    <!-- Titles -->
+    <string name="conf_title_1">Indian Oil and Gas Conference and Exhibition (IOGCE)</string>
+    <string name="conf_title_2">Marginal Fields: A Way Forward</string>
+    <string name="conf_title_3">Integration of Refinery and Petrochemicals</string>
+    <string name="conf_title_4">Model and Software Display Competition</string>
+    <string name="conf_title_5">Company Stalls</string>
+    <string name="conf_title_6">Networking Sessions</string>
+    <string name="conf_title_7">Panel Discussions</string>
+    <string name="conf_title_8">Question and Answer Sessions</string>
+
+
+    <!-- Description -->
+    <string name="conf_desc_1">Thriving to be bigger and better than yesterday, UPES SPE Student Chapter has grown by leaps and bounds. In a continuous endeavour to hone the technical competencies, the Chapter now seeks to introduce the UPES SPE Conference 2017, titled ‘Indian Oil and Gas Conference and Exhibition’, to be held on 10th February, 2017. The Conference will add a feather to the cap in the array of majestic events to be conducted during the UPES SPE Fest, 2017.\n\n Born out of the ambitious vision of the Chapter, IOGCE will help bridge the gap between the Industry professionals and the budding engineers.\n\n Eminent personalities from the renowned Oil and Gas Industries nationwide will be sharing the stage to equip the student community with the changes and drifts of the Industry.\n\n Conferences as such provide the delegates and the speakers with a common platform to acquire and disseminate knowledge through lectures and networking sessions, thereby, contributing their insights to the Oil and Gas Industry.</string>
+    <string name="conf_desc_2">In retrospect with the theme for UPES SPE Fest, 2017 - Conquering Changes - the UPES SPE Student Chapter will be organizing a conference on one of the greatest revolutions in the Oil and Gas Industry - ‘Marginal Fields: A Way Forward’.\n\n
+The term marginal field refers to an oil field that may not produce enough net income to make it worth developing at the given time. However, should the technical or economic conditions change, such a field may become worth commercializing.\n\n
+Taking into consideration the current scenario of the Oil and Gas sector, the drift to marginal fields is no surprise. Exploration and Production from these fields are relative to the changes in technical and economic capabilities leading to advent of newer challenges.\n\n
+The UPES SPE Student Chapter, in its continuous endeavour to equip the students with challenges and drifts in the Oil and Gas Industry, is collaborating to enlighten them about the reaps of this unseen avenue.
+</string>
+    <string name="conf_desc_3">As the world economy continues to grow, the energy demands escalate at a rapid pace. Many Industrial sectors depend on the Oil and Gas Industry for their energy needs and the entire Oil and Gas sector needs to step up its efforts to fulfil these requirements.\n\n
+A considerable amount of investment is required in the Downstream sector to achieve these goals. The challenges faced by the Industry in this endeavour are multifold. There are constraints on Capex and Opex, different crude properties, strict adherence to environmental laws, resource constraints and infrastructure.\n\n
+For a guaranteed supply of oil and gas in future, the Downstream sector needs to invest more in its Research and Development segment and manufacture better technology to pace with the growing demand.\n\n
+The UPES SPE Student Chapter is organizing a Conference on ‘Integration of Refinery and Petrochemicals’ to keep the aspiring engineers enlightened with these latest technologies.
+</string>
+    <string name="conf_desc_4">"Everything has to be modelled on a smaller scale. Even the tallest building in the world has a blueprint." \n\n
+We believe that the work of an engineer is not just to gain knowledge, but also learn to practically apply the same. During the expanse of the Conference, participants will have the opportunity to display small scale models along with a project on any Oil and Gas domain related software in front of the Industry professionals. IOGCEE will not just be a competing platform but also a step towards exhibiting and exploring creativity along with learning from various experts, professors and judges.
+
+</string>
+    <string name="conf_desc_5">“Virtue in obscurity is rewarded only in Heaven. To succeed in this world, you have to be known to people.” \n\n
+Keeping this enduring dictum in mind, there will be a Networking Session organized by various companies as part of the UPES SPE Conference, 2017. Numerous stalls will be set up by different corporations to provide participants with a chance to make connections, ask for advice on how to raise their profile and most importantly, to be able to put up any queries they might have about the firm. This speed Networking Session will give the participants a chance to explore all avenues and tell them all they need to know about the firm they have their hearts set on.
+</string>
+    <string name="conf_desc_6">When eminent personalities from the Industry share the same podium, knowledge is acquired and disseminated. One of the most important segments in the Oil and Gas Industry is that of building connections and networks between the professionals and the student community. \n\n
+UPES SPE Conference, 2017 aims at providing this opportunity through the various Networking Sessions that will be held during lunch, coffee and tea breaks during the Conference. During these sessions, students and participants will be able to interact with the speakers and with each other, hence, bridging the gap between the professionals and the aspiring engineers.
+</string>
+    <string name="conf_desc_7">“We can be knowledgeable with other men’s knowledge.” \n\n
+Lectures are a great way to gain knowledge and insight. However, one may say they have a long learning curve. Which is why, during the UPES SPE Conference, 2017, every Lecture will be followed by a Panel Discussion round on the topic at hand among the learned delegates. This will help the participants in further clarifying and evaluating their position regarding the topic and increase their understanding of the same.
+</string>
+    <string name="conf_desc_8">“Knowledge is having the right answer. Intelligence is asking the right question.” \n\n
+Curiosity might have killed the cat, but it is the driving force behind all innovation and the will to learn new things. An erudite discussion by acclaimed professionals teaches one a lot, but is rendered moot if one does not get a chance to pick their brains, which is why each panel will be followed by a short Question and Answer round to ensure participants’ thorough understanding.
+</string>
+
+    <string name="about1t">UPES SPE Student Chapter</string>
+    <string name="about2t">UPES SPE Fest</string>
+    <string name="about3t">Conquering Changes</string>
+    <string name="about1">
+        Established in 2009 under the flagship of SPE North India Section, the UPES SPE Student Chapter has made giant strides to transpire into a touchstone establishing its mission: to collect, disseminate and exchange technical knowledge among its members.\n\n
+        The Chapter has the rare distinction of being awarded the Gold Standard Awards for consecutive three years (2011, 2012 and 2013) as well as the prestigious Outstanding Student Chapter Award (2014, 2015 and 2016) by SPE International.\n\n
+        The UPES SPE Student Chapter members have been awarded several accolades and scholarships over the years. They have also attended several internationally acclaimed conferences and exhibitions like the India Drilling and Exploration Conference (IDEC), the SPE London Annual Conference, IPTC Doha, Qatar and IADC, Abu Dhabi.\n\n
+        The SPE Student Chapter has become a globally acknowledged student-run organization scaling the infinite.
+    </string>
+    <string name="about2">
+        The UPES SPE Fest is the annual convention of the UPES SPE Student Chapter which provides a common platform for mutual sharing of knowledge, experience and to strengthen the bonds of the future leaders of the Oil and Gas Industry. It has scaled to new heights since its inception in 2010, becoming grander each successive year.\n\n
+        The Fest has witnessed active participation from various National and International universities including those from Afghanistan, Bangladesh, Kazakhstan, Pakistan, Saudi Arabia, Liberia and UAE. The convention hasbeen supported enthusiastically by the Oil and Gas Industry through companies like Shell, Schlumberger, Cairn India, ONGC, Essar Oil, Reliance Industries, Petronet LNG and Oil India Limited, which also conduct workshops and events during the Fest.\n\n
+        The UPES Fest, 2016 was an inexplicable success. The Fest was graced by the presence of many experienced Industry professionals who bestowed the blooming buds of the Industry with the knowledge from their boundless experiences. The Fest witnessed a huge participation of 103 national, 20 local and 4 international delegates leading to the Synergism of the entire spectrum of Energy blooming throughout the world.
+    </string>
+    <string name="about3">The rise and descend of an industry is critical to its growth throughout the world economy but doesn’t define the robustness and sinewy of any industry. The Oil and Gas Industry, too, has recently endured one such downfall. Conquering this change has been a great challenge and the Industry is constantly evolving through it.\n\n
+        “Challenges always lead to the revocation of stagnancy and cater to an industry’s pragmatic and contributive progress”. The Oil and Gas Industry has observed a number of surviving capabilities which have led to the exploration of economic, technological and technical prowess of the Industry.\n\n
+        The UPES SPE Fest, 2017 has been designed to usher the budding professionals of the Industry through this challenge and its various aspects. It aims to bring about the awareness reverberating to the optimum relocation of resources and technology attributing the Industry’s survival.\n
+
+</string>
+
+</resources>
