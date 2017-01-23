@@ -40,7 +40,7 @@ public class GlideUtil {
         Context context = imageView.getContext();
         Glide.with(context)
                 .load(url)
-                .placeholder(R.drawable.ic_person_outline_black_24dp)
+                .placeholder(R.drawable.ic_person_outline_black)
                 .dontAnimate()
                 .fitCenter()
                 .into(imageView);

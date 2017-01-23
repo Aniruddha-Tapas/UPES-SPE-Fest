@@ -19,6 +19,7 @@ package com.myapps.upesse.upes_spefest.ui.activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,6 +29,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -56,6 +58,7 @@ public class PostsFragment extends Fragment {
     public static final int TYPE_HOME = 1002;
     private int mRecyclerViewPosition = 0;
     private OnPostSelectedListener mListener;
+    boolean toast = true;
 
 
     private RecyclerView mRecyclerView;
@@ -152,9 +155,31 @@ public class PostsFragment extends Fragment {
             case TYPE_HOME:
                 Log.d(TAG, "Restoring recycler view position (following): " + mRecyclerViewPosition);
 
+                if(toast){
+
+                    /*
+                    if(getView()!=null) {
+                        Snackbar.make(getView(), "You dont follow anyone currently.", Snackbar.LENGTH_LONG)
+                                .setAction("CLOSE", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+
+                                    }
+                                })
+                                .setActionTextColor(getResources().getColor(android.R.color.holo_red_light))
+                                .show();
+                    }else{
+                      */
+                        Toast.makeText(getContext(),"You don't follow anyone currently. Please follow users to view posts in your home feed.", Toast.LENGTH_LONG).show();
+                    //}
+
+
+                }
+
                 FirebaseUtil.getCurrentUserRef().child("following").addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(final DataSnapshot followedUserSnapshot, String s) {
+                        toast = false;
                         String followedUserId = followedUserSnapshot.getKey();
                         String lastKey = "";
                         if (followedUserSnapshot.getValue() instanceof String) {

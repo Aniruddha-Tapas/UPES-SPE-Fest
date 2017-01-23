@@ -12,6 +12,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/ivMenuUserProfilePhoto"
+            android:src="@drawable/ic_person_outline_black"
             android:layout_width="@dimen/global_menu_avatar_size"
             android:layout_height="@dimen/global_menu_avatar_size"
             android:layout_margin="12dp" />

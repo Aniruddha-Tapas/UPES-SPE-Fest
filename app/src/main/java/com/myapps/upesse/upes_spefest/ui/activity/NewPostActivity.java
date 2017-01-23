@@ -485,7 +485,8 @@ public class NewPostActivity extends BaseActivity implements
                         try {
                             cameraIntent();
                         } catch (Exception e) {
-                            Toast.makeText(this, "Camera Error : " + e.getMessage(), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(this, "Camera Error : " + e.getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "There seems to be an error with the Camera. Please use Gallery instead  to select image.", Toast.LENGTH_LONG).show();
                         }
                     else
                     if (userChoosenTask.equals("Choose from Library"))
@@ -501,7 +502,8 @@ public class NewPostActivity extends BaseActivity implements
                         try {
                             cameraIntent();
                         } catch (Exception e) {
-                            Toast.makeText(this, "Camera Error : " + e.getMessage(), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(this, "Camera Error : " + e.getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "There seems to be an error with the Camera. Please use Gallery instead  to select image.", Toast.LENGTH_LONG).show();
                         }
                     else if (userChoosenTask.equals("Choose from Library"))
                         galleryIntent();
