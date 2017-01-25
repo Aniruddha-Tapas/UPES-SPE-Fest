@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-package com.myapps.upesse.upes_spefest.ui.activity;
+package com.myapps.upessefest2017.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextSwitcher;
@@ -29,40 +28,18 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
-import com.myapps.upesse.upes_spefest.R;
-import com.myapps.upesse.upes_spefest.ui.utils.GlideUtil;
-import com.myapps.upesse.upes_spefest.ui.view.FeedContextMenu;
-import com.myapps.upesse.upes_spefest.ui.view.FeedContextMenuManager;
+import com.myapps.upessefest2017.R;
+import com.myapps.upessefest2017.ui.utils.GlideUtil;
+import com.myapps.upessefest2017.ui.view.FeedContextMenu;
+import com.myapps.upessefest2017.ui.view.FeedContextMenuManager;
 
-public class PostViewHolder extends RecyclerView.ViewHolder
-//        implements  FeedContextMenu.OnFeedContextMenuItemClickListener
-{
+public class PostViewHolder extends RecyclerView.ViewHolder{
+
     private final View mView;
     private PostClickListener mListener;
     public DatabaseReference mPostRef;
     public ValueEventListener mPostListener;
 
-    /*
-    @Override
-    public void onReportClick(int feedItem) {
-
-    }
-
-    @Override
-    public void onSharePhotoClick(int feedItem) {
-
-    }
-
-    @Override
-    public void onCopyShareUrlClick(int feedItem) {
-
-    }
-
-    @Override
-    public void onCancelClick(int feedItem) {
-
-    }
-    */
 
     public enum LikeStatus { LIKED, NOT_LIKED }
     private final ImageView mLikeIcon;
@@ -73,9 +50,11 @@ public class PostViewHolder extends RecyclerView.ViewHolder
     private TextView mPostTextView;
     private TextView mTimestampView;
     private TextSwitcher mNumLikesView;
-    private ImageButton btnMore;
+    //private ImageButton btnMore;
+    public ImageButton btnMore;
     public String mPostKey;
     public ValueEventListener mLikeListener;
+    private PostsFragment.OnPostSelectedListener onFeedItemClickListener;
 
     public PostViewHolder(final View itemView) {
         super(itemView);
@@ -86,15 +65,9 @@ public class PostViewHolder extends RecyclerView.ViewHolder
         mPostTextView = (TextView) itemView.findViewById(R.id.post_text);
         mTimestampView = (TextView) itemView.findViewById(R.id.post_timestamp);
         mNumLikesView = (TextSwitcher) itemView.findViewById(R.id.tsLikesCounter);
-        /*
+
         btnMore = (ImageButton)itemView.findViewById(R.id.btnMore);
-        btnMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FeedContextMenuManager.getInstance().toggleContextMenuFromView(v, itemView.getVerticalScrollbarPosition(), this);
-            }
-        });
-        */
+
 
         itemView.findViewById(R.id.btnComments).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +75,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder
                 mListener.showComments();
             }
         });
+
         mLikeIcon = (ImageView) itemView.findViewById(R.id.btnLike);
         mLikeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
