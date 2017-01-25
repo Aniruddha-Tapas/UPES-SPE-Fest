@@ -1,7 +1,5 @@
-package com.myapps.upesse.upes_spefest.ui.activity;
+package com.myapps.upessefest2017.ui.activity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
@@ -11,7 +9,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fasterxml.jackson.databind.deser.Deserializers;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,17 +23,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.myapps.upesse.upes_spefest.auth.MainActivity;
-import com.myapps.upesse.upes_spefest.events.ConferencesActivity;
-import com.myapps.upesse.upes_spefest.events.EventsMainActivity;
-import com.myapps.upesse.upes_spefest.ui.utils.GlideUtil;
+import com.myapps.upessefest2017.auth.MainActivity;
+import com.myapps.upessefest2017.events.ConferencesActivity;
+import com.myapps.upessefest2017.events.EventsMainActivity;
+import com.myapps.upessefest2017.ui.utils.GlideUtil;
 
-import butterknife.BindDimen;
-import butterknife.BindString;
-import butterknife.BindView;
+//import butterknife.BindDimen;
+//import butterknife.BindView;
 
-import com.myapps.upesse.upes_spefest.R;
-import com.myapps.upesse.upes_spefest.ui.utils.CircleTransformation;
+import com.myapps.upessefest2017.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,6 +40,7 @@ public class BaseDrawerActivity extends BaseActivity
 //        implements MenuItem.OnMenuItemClickListener
 {
 
+    /*
     @BindView(R.id.drawerLayout)
     DrawerLayout drawerLayout;
     @BindView(R.id.vNavigation)
@@ -53,6 +48,11 @@ public class BaseDrawerActivity extends BaseActivity
 
     @BindDimen(R.dimen.global_menu_avatar_size)
     int avatarSize;
+    */
+    DrawerLayout drawerLayout;
+    NavigationView vNavigation;
+    int avatarSize;
+
     //@BindString(R.string.user_profile_photo)
     //String profilePhoto;
     //private MenuItem inboxMenuItem;
@@ -76,6 +76,7 @@ public class BaseDrawerActivity extends BaseActivity
     @Override
     public void setContentView(int layoutResID) {
         super.setContentViewWithoutInject(R.layout.activity_drawer);
+
         ViewGroup viewGroup = (ViewGroup) findViewById(R.id.flContentRoot);
         LayoutInflater.from(this).inflate(layoutResID, viewGroup, true);
 
@@ -89,6 +90,9 @@ public class BaseDrawerActivity extends BaseActivity
         }
 
         bindViews();
+        drawerLayout = (DrawerLayout)findViewById(R.id.drawerLayout);
+        vNavigation = (NavigationView)findViewById(R.id.vNavigation);
+        avatarSize = R.dimen.global_menu_avatar_size;
 
         setupHeader();
 
