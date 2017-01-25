@@ -1,27 +1,10 @@
-/*
- * Copyright 2016 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-package com.myapps.upesse.upes_spefest.ui.activity;
+package com.myapps.upessefest2017.ui.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
@@ -29,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -38,9 +22,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.myapps.upesse.upes_spefest.R;
-import com.myapps.upesse.upes_spefest.ui.Models.Author;
-import com.myapps.upesse.upes_spefest.ui.Models.Post;
+import com.myapps.upessefest2017.R;
+import com.myapps.upessefest2017.ui.Models.Author;
+import com.myapps.upessefest2017.ui.Models.Post;
+import com.myapps.upessefest2017.ui.view.FeedContextMenuManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,11 +44,11 @@ public class PostsFragment extends Fragment {
     private int mRecyclerViewPosition = 0;
     private OnPostSelectedListener mListener;
     boolean toast = true;
+    private TextView homeFeed;
 
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter<PostViewHolder> mAdapter;
-    private EmptyRecyclerViewAdapter mEmptyAdapter;
 
     public PostsFragment() {
         // Required empty public constructor
@@ -89,6 +74,8 @@ public class PostsFragment extends Fragment {
         rootView.setTag(TAG);
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
+        homeFeed = (TextView)rootView.findViewById(R.id.homeFeed);
+
         return rootView;
     }
 
@@ -111,21 +98,10 @@ public class PostsFragment extends Fragment {
         switch (getArguments().getInt(KEY_TYPE)) {
             case TYPE_FEED:
                 Log.d(TAG, "Restoring recycler view position (all): " + mRecyclerViewPosition);
+
+                homeFeed.setVisibility(View.GONE);
+
                 Query allPostsQuery = FirebaseUtil.getPostsRef();
-
-                /*
-                allPostsQuery.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-                */
 
                 final ProgressDialog dialog = new ProgressDialog(getContext());
                 dialog.setMessage("Loading your feed...");
@@ -143,13 +119,7 @@ public class PostsFragment extends Fragment {
                         // TODO: Refresh feed view.
                     }
                 });
-                /*
-                if (mAdapter == null || mAdapter.getItemCount()==0){
-                    mRecyclerView.setAdapter(mEmptyAdapter);
-                }else {
-                    mRecyclerView.setAdapter(mAdapter);
-                }
-                */
+
                 mRecyclerView.setAdapter(mAdapter);
                 break;
             case TYPE_HOME:
@@ -157,21 +127,25 @@ public class PostsFragment extends Fragment {
 
                 if(toast){
 
-                    /*
+                    homeFeed.setVisibility(View.VISIBLE);
+                    homeFeed.bringToFront();
+
                     if(getView()!=null) {
-                        Snackbar.make(getView(), "You dont follow anyone currently.", Snackbar.LENGTH_LONG)
+                        Snackbar sb = Snackbar.make(getView(), R.string.homefeedwarning, Snackbar.LENGTH_INDEFINITE)
                                 .setAction("CLOSE", new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-
                                     }
                                 })
-                                .setActionTextColor(getResources().getColor(android.R.color.holo_red_light))
-                                .show();
+                                .setActionTextColor(getResources().getColor(android.R.color.holo_red_light));
+                        View snackbarView = sb.getView();
+                        TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setMaxLines(5);
+                        sb.show();
                     }else{
-                      */
+
                         Toast.makeText(getContext(),"You don't follow anyone currently. Please follow users to view posts in your home feed.", Toast.LENGTH_LONG).show();
-                    //}
+                    }
 
 
                 }
@@ -264,13 +238,7 @@ public class PostsFragment extends Fragment {
                                     }
                                 });
                                 mRecyclerView.setAdapter(mAdapter);
-                                /*
-                                if (mAdapter == null || mAdapter.getItemCount()==0){
-                                    mRecyclerView.setAdapter(mEmptyAdapter);
-                                }else {
-                                    mRecyclerView.setAdapter(mAdapter);
-                                }
-                                */
+
                             }
                             @Override
                             public void onCancelled(DatabaseError firebaseError) {
@@ -281,6 +249,13 @@ public class PostsFragment extends Fragment {
             default:
                 throw new RuntimeException("Illegal post fragment type specified.");
         }
+
+        mRecyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                FeedContextMenuManager.getInstance().onScrolled(recyclerView, dx, dy);
+            }
+        });
         //mRecyclerView.setAdapter(mAdapter);
     }
 
@@ -336,6 +311,13 @@ public class PostsFragment extends Fragment {
         FirebaseUtil.getLikesRef().child(postKey).addValueEventListener(likeListener);
         postViewHolder.mLikeListener = likeListener;
 
+        postViewHolder.btnMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.onMoreClick(v, postViewHolder.getAdapterPosition(),post.getThumb_url() );
+            }
+        });
+
         postViewHolder.setPostClickListener(new PostViewHolder.PostClickListener() {
             @Override
             public void showComments() {
@@ -348,6 +330,7 @@ public class PostsFragment extends Fragment {
                 Log.d(TAG, "Like position: " + position);
                 mListener.onPostLike(postKey);
             }
+
         });
     }
 
@@ -369,6 +352,10 @@ public class PostsFragment extends Fragment {
         super.onSaveInstanceState(savedInstanceState);
     }
 
+    public int getmRecyclerViewPosition() {
+        return mRecyclerViewPosition;
+    }
+
     private int getRecyclerViewScrollPosition() {
         int scrollPosition = 0;
         // TODO: Is null check necessary?
@@ -388,7 +375,9 @@ public class PostsFragment extends Fragment {
     public interface OnPostSelectedListener {
         void onPostComment(String postKey);
         void onPostLike(String postKey);
+        void onMoreClick(View v, int adapterPosition, String thumb_url);
     }
+
 
     @Override
     public void onAttach(Context context) {
