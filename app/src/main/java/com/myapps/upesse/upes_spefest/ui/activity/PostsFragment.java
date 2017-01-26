@@ -43,10 +43,8 @@ public class PostsFragment extends Fragment {
     public static final int TYPE_HOME = 1002;
     private int mRecyclerViewPosition = 0;
     private OnPostSelectedListener mListener;
-    boolean toast = true;
-    private TextView homeFeed;
-
-
+    public static boolean toast = true;
+    TextView homeFeed;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter<PostViewHolder> mAdapter;
 
@@ -74,7 +72,7 @@ public class PostsFragment extends Fragment {
         rootView.setTag(TAG);
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
-        homeFeed = (TextView)rootView.findViewById(R.id.homeFeed);
+        //homeFeed = (TextView)rootView.findViewById(R.id.homeFeed);
 
         return rootView;
     }
@@ -99,7 +97,9 @@ public class PostsFragment extends Fragment {
             case TYPE_FEED:
                 Log.d(TAG, "Restoring recycler view position (all): " + mRecyclerViewPosition);
 
-                homeFeed.setVisibility(View.GONE);
+
+                //if(homeFeed.getVisibility()==View.VISIBLE)
+                  //  homeFeed.setVisibility(View.GONE);
 
                 Query allPostsQuery = FirebaseUtil.getPostsRef();
 
@@ -125,10 +125,10 @@ public class PostsFragment extends Fragment {
             case TYPE_HOME:
                 Log.d(TAG, "Restoring recycler view position (following): " + mRecyclerViewPosition);
 
-                if(toast){
+                if(PostsFragment.toast ){
 
-                    homeFeed.setVisibility(View.VISIBLE);
-                    homeFeed.bringToFront();
+                    //if(homeFeed.getVisibility()==View.GONE)
+                      //  homeFeed.setVisibility(View.VISIBLE);
 
                     if(getView()!=null) {
                         Snackbar sb = Snackbar.make(getView(), R.string.homefeedwarning, Snackbar.LENGTH_INDEFINITE)
@@ -153,7 +153,7 @@ public class PostsFragment extends Fragment {
                 FirebaseUtil.getCurrentUserRef().child("following").addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(final DataSnapshot followedUserSnapshot, String s) {
-                        toast = false;
+                        PostsFragment.toast = false;
                         String followedUserId = followedUserSnapshot.getKey();
                         String lastKey = "";
                         if (followedUserSnapshot.getValue() instanceof String) {
@@ -314,7 +314,7 @@ public class PostsFragment extends Fragment {
         postViewHolder.btnMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onMoreClick(v, postViewHolder.getAdapterPosition(),post.getThumb_url() );
+                mListener.onMoreClick(v, postViewHolder.getAdapterPosition(),post.getThumb_url(),post.getAuthor().getUid(), post, postKey);
             }
         });
 
@@ -375,7 +375,7 @@ public class PostsFragment extends Fragment {
     public interface OnPostSelectedListener {
         void onPostComment(String postKey);
         void onPostLike(String postKey);
-        void onMoreClick(View v, int adapterPosition, String thumb_url);
+        void onMoreClick(View v, int adapterPosition, String thumb_url, String uid, Post post, String postKey);
     }
 
 
