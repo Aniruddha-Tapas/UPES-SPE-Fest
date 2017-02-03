@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.myapps.upesse.upes_spefest.ui.view.SquaredFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flRoot"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp" />
+
+    <ProgressBar
+        android:id="@+id/pbImageLoading2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/progress_bg"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress"
+        android:progressDrawable="@drawable/progress" />
+</com.myapps.upesse.upes_spefest.ui.view.SquaredFrameLayout>

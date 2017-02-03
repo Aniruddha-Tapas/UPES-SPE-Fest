@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myapps.upesse.upes_spefest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name="com.myapps.upesse.upes_spefest.USFApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+        <service
+            android:name="de.quist.app.errorreporter.ExceptionReportService"
+            android:process=":exceptionReporter"/>
+
+        <meta-data
+            android:name="de.quist.app.errorreporter.targetUrl"
+            android:value="http://www.appliedprogramming.net/error.php" />
+
+        <activity
+            android:name="de.quist.app.errorreporter.ExceptionReportActivity"
+            android:process=":exceptionReporter"
+            android:theme="@android:style/Theme.NoDisplay"/>
+        -->
+
+        <!-- SplashActivity-->
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.splash.AboutSplash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity-->
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.auth.MainActivity"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.events.EventsMainActivity"
+            android:label="Events"
+            android:parentActivityName="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity"
+            android:theme="@style/AppTheme">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.events.ConferencesActivity"
+            android:label="Conferences"
+            android:parentActivityName="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity"
+            android:theme="@style/AppTheme">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.ui.activity.AboutActivity"
+            android:label="About"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <provider
+            android:name="com.myapps.upesse.upes_spefest.ui.activity.SuggestionProvider"
+            android:authorities="com.myapps.upesse.upes_spefest.ui.activity.SuggestionProvider"
+            android:exported="false" />
+
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.ui.activity.NewPostActivity"
+            android:label="New Post"
+            android:parentActivityName="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.ui.activity.CommentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity
+            android:name="com.myapps.upesse.upes_spefest.ui.activity.UserDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<!--menu_main.xml-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".InstaMainActivity">
+
+
+    <item
+        android:id="@+id/searchViewDemo"
+        android:icon="@drawable/ic_search_white_48dp"
+        android:title="Search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:title="Logout"
+        app:showAsAction="always" />
+</menu>

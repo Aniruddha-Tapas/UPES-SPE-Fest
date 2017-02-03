@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flContentRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/vNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#ffffff"
+            app:headerLayout="@layout/view_global_menu_header"
+            app:itemIconTint="#8b8b8b"
+            app:itemTextColor="#666666"
+            app:menu="@menu/drawer_menu">
+
+            <LinearLayout
+                android:id="@+id/extrabuttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:background="@color/style_color_primary"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/style_color_primary"
+                    android:src="@drawable/facebook_box" />
+
+                <ImageButton
+                    android:id="@+id/insta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/style_color_primary"
+                    android:src="@drawable/instagram" />
+
+                <ImageButton
+                    android:id="@+id/youtube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/style_color_primary"
+                    android:src="@drawable/youtube_play" />
+            </LinearLayout>
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
+

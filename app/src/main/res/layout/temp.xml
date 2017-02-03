@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.InstaMainActivity">
+
+    <TextView
+        android:id="@+id/homeFeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/homefeedwarning"
+        android:textColor="@color/style_color_primary"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/btnDelete"
+        style="@style/ContextMenuButton"
+        android:text="DELETE"
+        android:drawableLeft="@drawable/delete_forever"
+        android:drawableStart="@drawable/delete_forever"
+        android:textColor="@color/btn_context_menu_text_red" />
+
+
+    <Button
+        android:id="@+id/btnSavePhoto"
+        style="@style/ContextMenuButton"
+        android:drawableLeft="@drawable/download"
+        android:drawableStart="@drawable/download"
+        android:text="SAVE IMAGE" />
+
+    <!--
+    <Button
+        android:id="@+id/btnCopyShareUrl"
+        style="@style/ContextMenuButton"
+        android:text="COPY SHARE URL" />
+    -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="@style/ContextMenuButton"
+        android:text="CANCEL" />
+
+</merge>
