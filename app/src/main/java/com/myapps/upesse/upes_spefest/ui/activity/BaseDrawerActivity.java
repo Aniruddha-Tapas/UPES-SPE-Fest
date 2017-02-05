@@ -32,6 +32,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.myapps.upesse.upes_spefest.auth.MainActivity;
+import com.myapps.upesse.upes_spefest.events.BasicActivity;
 import com.myapps.upesse.upes_spefest.events.ConferencesActivity;
 import com.myapps.upesse.upes_spefest.events.EventsMainActivity;
 import com.myapps.upesse.upes_spefest.ui.utils.GlideUtil;
@@ -196,6 +197,11 @@ public class BaseDrawerActivity extends BaseActivity
                         Intent newPostIntent = new Intent(getApplicationContext(), NewPostActivity.class);
                         startActivity(newPostIntent);
                         break;
+                    case R.id.menu_schedule:
+                        navItemIndex = 7;
+                        startActivity(new Intent(getApplicationContext(), BasicActivity.class));
+                        //drawer.closeDrawers();
+                        return true;
                     case R.id.menu_events:
                         navItemIndex = 2;
                         //CURRENT_TAG = TAG_MOVIES;
@@ -214,7 +220,7 @@ public class BaseDrawerActivity extends BaseActivity
                         //drawer.closeDrawers();
                         return true;
                     case R.id.menu_signout:
-                        navItemIndex = 5;
+                        navItemIndex = 6;
                         signOutConfirmation();
                         break;
                     default:
