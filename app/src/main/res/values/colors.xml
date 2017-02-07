@@ -46,5 +46,35 @@
 
     <color name="user_detail_separator">#007787</color>
 
+    <!-- week view -->
+    <color name="event_color_01">#59dbe0</color>
+    <color name="event_color_02">#f57f68</color>
+    <color name="event_color_03">#87d288</color>
+    <color name="event_color_04">#f8b552</color>
+    <color name="toolbar">#efefef</color>
+    <color name="toolbar_text">#8f000000</color>
+    <color name="accent">#2789e4</color>
+
+    <color name="body_text_1">#de000000</color>
+    <color name="body_text_2">#8a000000</color>
+    <color name="body_text_3">#60000000</color>
+    <color name="body_text_disabled">#44000000</color>
+
+    <color name="body_text_1_inverse">#deffffff</color>
+    <color name="body_text_2_inverse">#8affffff</color>
+    <color name="flat_button_text">#ff0097a7</color>
+    <color name="list_dropdown_divider_color">#92a3a3a3</color>
+    <color name="navview_icon">#ff444444</color>
+    <color name="video_title">#de07434d</color>
+    <color name="filter_text">#ff0097a7</color>
+    <color name="my_schedule_conflict">#dd2c00</color>
+    <color name="my_schedule_past">#95a1a6</color>
+    <color name="my_schedule_hour_header_default">#de455a64</color>
+    <color name="my_schedule_hour_header_finished">#b8455a64</color>
+    <color name="my_schedule_icon_default">#ff07434d</color>
+    <color name="my_schedule_icon_finished">#ff49757c</color>
+    <color name="my_schedule_session_title_default">#de07434d</color>
+    <color name="my_schedule_session_title_finished">#b807434d</color>
+
 
 </resources>

@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 9:30 am -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:background="#fff"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:foreground="?android:selectableItemBackground"
+                        android:importantForAccessibility="yes">
+
+                        <TextView
+                            android:id="@+id/start_time31"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/keyline_2"
+                            android:paddingRight="@dimen/keyline_2"
+                            android:text="9:30 a.m."
+                            android:textColor="#007787"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/touch_area31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/icon31"
+                            android:layout_width="@dimen/my_schedule_icon_size"
+                            android:layout_height="@dimen/my_schedule_icon_size"
+                            android:layout_marginLeft="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginRight="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_in_schedule" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/slot_title31"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Techuminati - HSE"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_title32"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Techuminati - Production"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_title33"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Techuminati - Exploration and Unconventional"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+
+                            <TextView
+                                android:id="@+id/slot_description31"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="4dp"
+                                android:text="9:30 a.m. - 12:00 noon"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/list_dropdown_divider_color" />
+
+                            <TextView
+                                android:id="@+id/slot_title37"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Petrabol"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+
+                            <TextView
+                                android:id="@+id/slot_description35"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="4dp"
+                                android:text="9:30 a.m. - 1:00 p.m."
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/list_dropdown_divider_color" />
+
+                            <TextView
+                                android:id="@+id/slot_title34"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Mud Challenge Finals"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+
+                            <TextView
+                                android:id="@+id/slot_description32"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="4dp"
+                                android:text="9:30 a.m. - 10:30 a.m."
+                                android:textSize="@dimen/text_size_medium" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/list_dropdown_divider_color" />
+
+                            <TextView
+                                android:id="@+id/slot_title35"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Virtuoso"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+
+                            <TextView
+                                android:id="@+id/slot_description33"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="4dp"
+                                android:text="10:30 a.m. - 12:00 noon"
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/separator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/list_dropdown_divider_color" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- 12:00 noon -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:background="#fff"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:foreground="?android:selectableItemBackground"
+                        android:importantForAccessibility="yes">
+
+                        <TextView
+                            android:id="@+id/start_time32"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/keyline_2"
+                            android:paddingRight="@dimen/keyline_2"
+                            android:text="12:00 noon"
+                            android:textColor="#007787"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/touch_area32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/icon32"
+                            android:layout_width="@dimen/my_schedule_icon_size"
+                            android:layout_height="@dimen/my_schedule_icon_size"
+                            android:layout_marginLeft="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginRight="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/flag" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/slot_title38"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Symposium Finals"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_title39"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Adzap"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_title310"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Noesis Finals"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_title311"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Breaking Bid Finals"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+
+                            <TextView
+                                android:id="@+id/slot_description36"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="4dp"
+                                android:text="12:00 noon - 1:00 p.m."
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/list_dropdown_divider_color" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- 1:00 pm Lunch -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:background="#fff"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:foreground="?android:selectableItemBackground"
+                        android:importantForAccessibility="yes">
+
+                        <TextView
+                            android:id="@+id/start_time33"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/keyline_2"
+                            android:paddingRight="@dimen/keyline_2"
+                            android:text="1:00 p.m."
+                            android:textColor="#007787"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/touch_area33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/icon33"
+                            android:layout_width="@dimen/my_schedule_icon_size"
+                            android:layout_height="@dimen/my_schedule_icon_size"
+                            android:layout_marginLeft="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginRight="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/food" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/slot_title312"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Lunch Break"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_description37"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="4dp"
+                                android:text="1:00 p.m. - 2:00 p.m."
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/list_dropdown_divider_color" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- 2:00 am -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:background="#fff"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:foreground="?android:selectableItemBackground"
+                        android:importantForAccessibility="yes">
+
+                        <TextView
+                            android:id="@+id/start_time34"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/keyline_2"
+                            android:paddingRight="@dimen/keyline_2"
+                            android:text="2:00 p.m."
+                            android:textColor="#007787"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/touch_area34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/icon34"
+                            android:layout_width="@dimen/my_schedule_icon_size"
+                            android:layout_height="@dimen/my_schedule_icon_size"
+                            android:layout_marginLeft="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginRight="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/closing" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/slot_title313"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Closing Ceremony"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_description38"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="4dp"
+                                android:text="2:00 p.m. - 4:30 p.m."
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/list_dropdown_divider_color" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- 4:30 pm Coffee -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:background="#fff"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:foreground="?android:selectableItemBackground"
+                        android:importantForAccessibility="yes">
+
+                        <TextView
+                            android:id="@+id/start_time35"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/keyline_2"
+                            android:paddingRight="@dimen/keyline_2"
+                            android:text="4:30 p.m."
+                            android:textColor="#007787"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/touch_area35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/icon35"
+                            android:layout_width="@dimen/my_schedule_icon_size"
+                            android:layout_height="@dimen/my_schedule_icon_size"
+                            android:layout_marginLeft="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginRight="@dimen/my_schedule_icon_horizontal_padding"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/coffee" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/slot_title314"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginTop="6dp"
+                                android:ellipsize="end"
+                                android:text="Coffee Break"
+                                android:textAllCaps="false"
+                                android:textColor="@color/my_schedule_session_title_default"
+                                android:textSize="@dimen/text_size_mediumlarge" />
+
+                            <TextView
+                                android:id="@+id/slot_description39"
+                                style="@style/Body1Text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="4dp"
+                                android:text="4:30 p.m. - 5:00 p.m."
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/list_dropdown_divider_color" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

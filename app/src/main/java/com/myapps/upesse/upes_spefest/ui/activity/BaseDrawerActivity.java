@@ -3,17 +3,11 @@ package com.myapps.upesse.upes_spefest.ui.activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Handler;
-import android.speech.RecognizerIntent;
-import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -32,9 +26,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.myapps.upesse.upes_spefest.auth.MainActivity;
-import com.myapps.upesse.upes_spefest.events.BasicActivity;
 import com.myapps.upesse.upes_spefest.events.ConferencesActivity;
 import com.myapps.upesse.upes_spefest.events.EventsMainActivity;
+import com.myapps.upesse.upes_spefest.events.ScheduleActivity;
 import com.myapps.upesse.upes_spefest.ui.utils.GlideUtil;
 
 //import butterknife.BindDimen;
@@ -42,9 +36,7 @@ import com.myapps.upesse.upes_spefest.ui.utils.GlideUtil;
 
 import com.myapps.upesse.upes_spefest.R;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class BaseDrawerActivity extends BaseActivity
@@ -199,7 +191,7 @@ public class BaseDrawerActivity extends BaseActivity
                         break;
                     case R.id.menu_schedule:
                         navItemIndex = 7;
-                        startActivity(new Intent(getApplicationContext(), BasicActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ScheduleActivity.class));
                         //drawer.closeDrawers();
                         return true;
                     case R.id.menu_events:

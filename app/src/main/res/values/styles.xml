@@ -87,4 +87,14 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="TextAppearance.Body1" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item> <!-- bug in AppCompat, can remove this when it's fixed -->
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Body1Text">
+        <item name="android:textAppearance">@style/TextAppearance.Body1</item>
+        <item name="android:lineSpacingMultiplier">@dimen/body_1_spacing</item>
+    </style>
+
 </resources>

@@ -70,6 +70,18 @@
         </activity>
 
         <activity
+            android:name="com.myapps.upesse.upes_spefest.events.ScheduleActivity"
+            android:label="Schedule"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity"
+            android:theme="@style/AppTheme">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity" />
+        </activity>
+
+        <activity
             android:name="com.myapps.upesse.upes_spefest.events.ConferencesActivity"
             android:label="Conferences"
             android:parentActivityName="com.myapps.upesse.upes_spefest.ui.activity.InstaMainActivity"
@@ -98,11 +110,6 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-
-        <provider
-            android:name="com.myapps.upesse.upes_spefest.ui.activity.SuggestionProvider"
-            android:authorities="com.myapps.upesse.upes_spefest.ui.activity.SuggestionProvider"
-            android:exported="false" />
 
         <activity
             android:name="com.myapps.upesse.upes_spefest.ui.activity.NewPostActivity"

@@ -9,8 +9,8 @@ android {
         applicationId "com.myapps.upesse.upes_spefest"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 2
-        versionName "1.1.0"
+        versionCode 3
+        versionName "1.2"
         //renderscriptTargetApi 22
         //renderscriptSupportModeEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -73,6 +73,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
 
     compile 'fr.tvbarthel.blurdialogfragment:lib:2.2.0'
+    compile 'com.camnter.easyslidingtabs:easyslidingtabs:1.0'
 
     //compile 'com.jakewharton:butterknife:8.4.0'
     //annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
@@ -80,8 +81,6 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.commonsware.cwac:camera:0.7.0'
     compile 'com.fenchtose.nocropper:nocropper:0.1.7'
-
-    //compile 'com.lapism:searchview:4.0'
 
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
