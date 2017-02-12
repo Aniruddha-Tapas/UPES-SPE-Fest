@@ -1,6 +1,6 @@
 # UPES SPE Fest 2017
 
-Built an Instagram like Social Networking Android App for UPES SPE Fest.
+Built an Instagram like Social Networking Android App for UPES SPE Fest using Firebase *only* as backend.
 
 ## Screenshots
 
@@ -27,5 +27,26 @@ Built an Instagram like Social Networking Android App for UPES SPE Fest.
 * Register for upcoming and ongoing events.
 * Keep tabs on the conferences to be conducted during the Fest.
 * Stay connected with UPES SPE using the Facebook, Instagram, Official website links through the app.
+
+## Credits
+
+* [InstaMaterial](https://github.com/frogermcs/InstaMaterial) for the UI. Made some changes to better suit the functionalities. 
+* [Firebase](https://github.com/firebase) for backend stuff:
+
+**Firebase Authentication** for Authentication purposes.
+
+**Firebase Database** to store user data as shown in the figure below:
+
+<img src="https://raw.githubusercontent.com/Aniruddha-Tapas/UPES-SPE-Fest/master/Screenshots/firebase_db.png"/>
+
+**Firebase Storage** to enable storing, displaying, saving and deleting images from the app.
+
+
+## Build the app
+
+To build this app yourself, you'll need to add the google-services.json file that you've created to the `app` folder. 
+
+[Here](https://firebase.google.com/docs/android/setup)'s how to add Firebase to your Android project. Or maybe you can start with this [codelab](https://codelabs.developers.google.com/codelabs/firebase-android/) to learn more about integrating firebase into your Android apps.
+
 
 <hr>
