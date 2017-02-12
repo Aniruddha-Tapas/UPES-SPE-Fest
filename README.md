@@ -1,8 +1,6 @@
 # UPES SPE Fest 2017
 
-===============
-
-Built an Instagram like Social Networking Android App for UPES SPE Fest. It includes the following functionalities:
+Built an Instagram like Social Networking Android App for UPES SPE Fest.
 
 ## Screenshots
 
