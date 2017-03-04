@@ -37,7 +37,7 @@ These permissions are required to create directories titled "UPES SPE Fest 2017"
 
 These permissions are required by UPES SPE Fest 2017 for one purpose and this one purpose only: 
 
->> To enable the user to take pictures so that he could be able to share them on the UPES SPE Fest 2017 common platform. Note that the pictures taken using camera for this functionality are not stored on any other location other than the user's device. This images are only saved to the user's device after the user agrees to the confirmation prompt from UPES SPE Fest 2017. The images are not uploaded or stored anywhere else.  If this permission is not provided by the user, UPES SPE Fest 2017 would fail to take pictures for uploading and sharing.
+> **To enable the user to take pictures so that he could be able to share them on the UPES SPE Fest 2017 common platform. Note that the pictures taken using camera for this functionality are not stored on any other location other than the user's device. This images are only saved to the user's device after the user agrees to the confirmation prompt from UPES SPE Fest 2017. The images are not uploaded or stored anywhere else.  If this permission is not provided by the user, UPES SPE Fest 2017 would fail to take pictures for uploading and sharing.**
 
 ### Other 
 *	Receive data from Internet
