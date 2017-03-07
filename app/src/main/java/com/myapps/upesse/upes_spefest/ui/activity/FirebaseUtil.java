@@ -23,7 +23,7 @@ class FirebaseUtil {
     public static Author getAuthor() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null) return null;
-        return new Author(user.getDisplayName(), user.getPhotoUrl().toString(), user.getUid());
+        return new Author(user.getDisplayName(), user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : null, user.getUid());
     }
 
     public static DatabaseReference getCurrentUserRef() {
