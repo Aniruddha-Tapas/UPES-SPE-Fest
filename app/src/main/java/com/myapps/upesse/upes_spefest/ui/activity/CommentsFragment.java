@@ -166,7 +166,7 @@ public class CommentsFragment extends Fragment {
                 }
 
                 Author author = new Author(user.getDisplayName(),
-                        user.getPhotoUrl().toString(), user.getUid());
+                        user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : null, user.getUid());
 
                 Comment comment = new Comment(author, commentText.toString(),
                         ServerValue.TIMESTAMP);
