@@ -240,7 +240,7 @@ public class UserDetailActivity extends AppCompatActivity {
                 Log.w(TAG, "mPersonRef:" + mPersonRef.getKey());
                 CircleImageView userPhoto = (CircleImageView) findViewById(R.id.user_detail_photo);
                 try {
-                    GlideUtil.loadProfileIcon(person.getPhotoUrl(), userPhoto);
+                    GlideUtil.loadProfileIcon(person.getPhotoUrl() != null ? person.getPhotoUrl().toString() : null, userPhoto);
                 } catch (Exception e) {
                 }
 
