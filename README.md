@@ -1,6 +1,6 @@
 # UPES SPE Fest 2017
 
-Built an Instagram like Social Networking Android App for UPES SPE Fest using Firebase *only* as backend.
+An Instagram like Social Networking Android App for UPES SPE Fest using Firebase *only* as backend.
 
 ## Screenshots
 
