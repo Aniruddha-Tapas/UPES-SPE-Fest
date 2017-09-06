@@ -35,7 +35,7 @@ An Instagram like Social Networking Android App for UPES SPE Fest using Firebase
 
 **Firebase Authentication** for Authentication purposes.
 
-**Firebase Database** to store user data as shown in the figure below:
+**Firebase Database** to store user data in the schema as shown below:
 
 <img src="https://raw.githubusercontent.com/Aniruddha-Tapas/UPES-SPE-Fest/master/Screenshots/firebase_db.png"/>
 
